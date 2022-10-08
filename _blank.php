@@ -8,8 +8,6 @@
     <meta name="author" content="Reconix">
     <title>Quetrix | Bootstrap v5.2 Theme</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/">
-
     <!--=:: CSS Dependencies ::=-->
     <link href="assets/bootstrap/bootstrap.min.css" rel="stylesheet">
 
@@ -18,41 +16,10 @@
 
     <!--=:: Fonts ::=-->
     <link href="assets/bootstrap/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Chivo" rel="stylesheet">
 
     <style>
     /* TEST STUFF: We'll clean this up later */
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-
-      .b-example-divider {
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
-
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
-
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
 
       .nav-scroller {
         position: relative;
@@ -71,6 +38,77 @@
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
       }
+
+      #nav-container {
+        padding: 12px 0px;
+      }
+
+      .navbar {
+        border-bottom: 4px solid #4f5966
+      }
+
+      .bg-dark {
+        background: rgb(10,10,10);
+        background: linear-gradient(180deg, rgb(20 20 20) 0%, rgb(41 48 56) 100%)
+      }
+
+      .navbar-brand {
+        line-height: 10px;
+        font-size: 24px;
+        font-variant: small-caps;
+        letter-spacing: 3.5px;
+      }
+
+      #navbar-brand {}
+
+      .navbar-nav > li {
+        margin-top: 5px;
+        padding:0px;
+        line-height: 10px;
+        font-family: 'Chivo', serif;
+        letter-spacing: 0.4px;
+      }
+
+      .navbar-nav > .nav-item > .nav-link:hover {
+        color:#fff;
+        padding-top: 6px;
+        transition: all 0.5s;
+      }
+
+      .text-end > .btn {
+        padding: 5px 17px 5px 17px;
+        transition: all 0.8s;
+      }
+
+      /* / / / / / / / / / / / / / / / / / / / */
+
+      .c-demo {
+        margin-top: 110px;
+      }
+
+      /* / / / / / / / / / / / / / / / / / / / */
+
+
+      .btn-sign-up {
+        color: #5fcf9b;
+        border-color: #198754;
+      }
+      .btn-sign-up:hover {
+        color: #fff !important;
+        background-color: #198754 !important;
+        border-color: #39c182 !important;
+      }
+
+      .btn-login {
+        color: #0dcaf0;
+        border-color: #0dcaf0;
+      }
+      .btn-login:hover {
+        color: #fff !important;
+        background-color: #0089c7 !important;
+        border-color: #00d4ffa1 !important;
+      }
+
     </style>
 
   </head>
@@ -89,7 +127,7 @@
   // Just a basic page atm, fancy stuff added later for home
   //include_once 'inc/carousel.php'; ?>
 
-  <div class="container marketing">
+  <div class="container c-demo">
 
     <!-- Three columns of text below the carousel -->
     <div class="row">
@@ -97,6 +135,7 @@
         <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
 
         <h2 class="fw-normal">Heading</h2>
+
         <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
         <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
@@ -169,5 +208,27 @@
 
   <!--=:: JS Dependencies ::=--->
   <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
+
+  <script>
+  // TEST STUFF: We'll clean this up later
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 380) {
+      document.getElementById("navbar-brand").style.letterSpacing = "1px";
+      document.getElementById("navbar-brand").style.transition = "all 0.5s";
+
+      document.getElementById("nav-container").style.padding = "0px";
+      document.getElementById("nav-container").style.transition = "all 0.5s";
+
+
+    } else {
+      document.getElementById("nav-container").style.padding = "10px";
+      document.getElementById("nav-container").style.transition = "all 0.5s";
+
+      document.getElementById("navbar-brand").style.letterSpacing = "3.5px";
+    }
+  }
+  </script>
 
 </body></html>
