@@ -84,6 +84,7 @@
 
       .c-demo {
         margin-top: 110px;
+        margin-bottom: 50px;
       }
 
       /* / / / / / / / / / / / / / / / / / / / */
@@ -197,7 +198,7 @@
       </div>
     </div>
 
-    <hr class="featurette-divider">
+    <!-- <hr class="featurette-divider"> -->
 
     <!-- /END THE FEATURETTES -->
 
@@ -214,19 +215,31 @@
   window.onscroll = function() {scrollFunction()};
 
   function scrollFunction() {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 380) {
+    if (document.body.scrollTop > 380 || document.documentElement.scrollTop > 380) {
       document.getElementById("navbar-brand").style.letterSpacing = "1px";
-      document.getElementById("navbar-brand").style.transition = "all 0.5s";
+      document.getElementById("navbar-brand").style.transition = "all 0.8s";
 
       document.getElementById("nav-container").style.padding = "0px";
+      document.getElementById("nav-container").style.fontSize = "13px";
       document.getElementById("nav-container").style.transition = "all 0.5s";
+
+      document.getElementById("btn-login").style.padding = "4px 7px 4px 7px";
+      document.getElementById("btn-sign-up").style.padding = "4px 7px 4px 7px";
+      document.getElementById("btn-login").style.fontSize = "12px";
+      document.getElementById("btn-sign-up").style.fontSize = "12px";
 
 
     } else {
       document.getElementById("nav-container").style.padding = "10px";
+      document.getElementById("nav-container").style.fontSize = "15px";
       document.getElementById("nav-container").style.transition = "all 0.5s";
 
-      document.getElementById("navbar-brand").style.letterSpacing = "3.5px";
+      document.getElementById("navbar-brand").style.letterSpacing = "4px";
+
+      document.getElementById("btn-login").style.padding = "5px 17px 5px 17px";
+      document.getElementById("btn-login").style.fontSize = "14px";
+      document.getElementById("btn-sign-up").style.fontSize = "14px";
+      document.getElementById("btn-sign-up").style.padding = "5px 17px 5px 17px";
     }
   }
   </script>
