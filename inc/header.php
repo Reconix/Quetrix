@@ -30,8 +30,8 @@
         </ul>
         <div class="text-end">
 
-          <button type="button" class="btn btn-login btn-sm me-2"><i class="bi bi-box-arrow-in-right"></i> Login</button>
-          <button type="button" class="btn btn-sign-up btn-sm"><i class="bi bi-person-lines-fill"></i> Sign-up</button>
+          <button type="button" id="btn-login" class="btn btn-login btn-sm me-2"><i class="bi bi-box-arrow-in-right"></i> Login</button>
+          <button type="button" id="btn-sign-up" class="btn btn-sign-up btn-sm"><i class="bi bi-person-lines-fill"></i> Sign-up</button>
         </div>
       </div>
     </div>
