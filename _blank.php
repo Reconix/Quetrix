@@ -41,6 +41,7 @@
 
       #nav-container {
         padding: 12px 0px;
+        transition = all 0.5s;
       }
 
       .navbar {
@@ -82,6 +83,16 @@
 
       /* / / / / / / / / / / / / / / / / / / / */
 
+      .bg-gradient-que {
+        background-image: linear-gradient(
+          0deg,
+          hsl(0deg 0% 95%) 0%,
+          hsl(213deg 9% 55%) 19%,
+          hsl(215deg 9% 56%) 45%,
+          hsl(0deg 0% 98%) 100%
+        );
+      }
+
       .c-demo {
         margin-top: 110px;
         margin-bottom: 50px;
@@ -122,7 +133,7 @@
 <?php include_once 'inc/header.php'; ?>
 
 <!--=:: Content Area ::=-->
-<main>
+<main class="bg-gradient-que">
 
   <?php
   // Just a basic page atm, fancy stuff added later for home
@@ -200,8 +211,6 @@
 
     <!-- <hr class="featurette-divider"> -->
 
-    <!-- /END THE FEATURETTES -->
-
   </div><!-- /.container -->
 
   <?php include_once 'inc/footer.php';?>
@@ -215,33 +224,58 @@
   window.onscroll = function() {scrollFunction()};
 
   function scrollFunction() {
+
+    // Lets set some easy vars
+    const navBrand = document.getElementById("navbar-brand");
+    const navContainer = document.getElementById("nav-container");
+    const navLogin = document.getElementById("btn-login");
+    const navSignup = document.getElementById("btn-sign-up");
+
     if (document.body.scrollTop > 380 || document.documentElement.scrollTop > 380) {
-      document.getElementById("navbar-brand").style.letterSpacing = "1px";
-      document.getElementById("navbar-brand").style.transition = "all 0.8s";
-
-      document.getElementById("nav-container").style.padding = "0px";
-      document.getElementById("nav-container").style.fontSize = "13px";
-      document.getElementById("nav-container").style.transition = "all 0.5s";
-
-      document.getElementById("btn-login").style.padding = "4px 7px 4px 7px";
-      document.getElementById("btn-sign-up").style.padding = "4px 7px 4px 7px";
-      document.getElementById("btn-login").style.fontSize = "12px";
-      document.getElementById("btn-sign-up").style.fontSize = "12px";
-
-
+      // Logo
+      navBrand.style.letterSpacing = "1px";
+      navBrand.style.transition = "all 0.8s";
+      // Navigation
+      navContainer.style.padding = "0px";
+      navContainer.style.fontSize = "13px";
+      navContainer.style.transition = "all 0.5s";
+      // Buttons
+      navLogin.style.padding = "4px 7px 4px 7px";
+      navSignup.style.padding = "4px 7px 4px 7px";
+      navLogin.style.fontSize = "12px";
+      navSignup.style.fontSize = "12px";
     } else {
-      document.getElementById("nav-container").style.padding = "10px";
-      document.getElementById("nav-container").style.fontSize = "15px";
-      document.getElementById("nav-container").style.transition = "all 0.5s";
-
-      document.getElementById("navbar-brand").style.letterSpacing = "4px";
-
-      document.getElementById("btn-login").style.padding = "5px 17px 5px 17px";
-      document.getElementById("btn-login").style.fontSize = "14px";
-      document.getElementById("btn-sign-up").style.fontSize = "14px";
-      document.getElementById("btn-sign-up").style.padding = "5px 17px 5px 17px";
+      // Logo
+      navBrand.style.letterSpacing = "4px";
+      // Navigation
+      navContainer.style.padding = "10px";
+      navContainer.style.fontSize = "15px";
+      navContainer.style.transition = "all 0.5s";
+      // Buttons
+      navLogin.style.padding = "5px 17px 5px 17px";
+      navLogin.style.fontSize = "14px";
+      navSignup.style.fontSize = "14px";
+      navSignup.style.padding = "5px 17px 5px 17px";
     }
+
+    // Going Up Button
+    const goingUp = document.getElementById("btn-going-UP");
+
+    if (document.body.scrollTop > 390 || document.documentElement.scrollTop > 390) {
+      goingUp.style.opacity = "95";
+    } else {
+      goingUp.style.opacity = "0";
+    }
+
+    goingUp.addEventListener("click", backToTop);
+
+    function backToTop() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+
   }
+
   </script>
 
 </body></html>

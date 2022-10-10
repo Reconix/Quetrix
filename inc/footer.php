@@ -18,6 +18,28 @@
     margin-top: 0px !important;
     margin-bottom: 0px !important;
   }
+
+  #btn-going-UP {
+    position: fixed;
+    bottom: 45px;
+    right: 25px;
+    opacity: 0;
+
+    color: #bdbdbd;
+    border-color: rgb(255 255 255 / 55%);
+    background: rgba(40, 46, 53, 0.8);
+    box-shadow: 0 1px 2px rgb(0 0 0 / 88%);
+
+    transition: all 0.5s ease-in-out 0s;
+  }
+
+  #btn-going-UP:hover {
+    color: #ffffff;
+    border-color: rgb(225 225 225 / 98%);
+    background: rgb(79, 89, 102);
+    box-shadow: 0 1px 2px rgb(0 0 0 / 44%);
+  }
+
 </style>
 
 <footer class="">
@@ -41,3 +63,8 @@
     </ul>
   </div>
 </footer>
+
+<!-- Going Up ? -->
+<button type="button" class="btn" id="btn-going-UP">
+  <i class="bi bi-chevron-up"></i>
+</button>
