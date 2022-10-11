@@ -94,7 +94,7 @@
       }
 
       .c-demo {
-        margin-top: 110px;
+        padding-top: 110px;
         margin-bottom: 50px;
       }
 
@@ -119,6 +119,29 @@
         color: #fff !important;
         background-color: #0089c7 !important;
         border-color: #00d4ffa1 !important;
+      }
+
+      /* Scrollbar */
+
+      /* Works on Firefox */
+      * {
+        scrollbar-width: thin;
+        scrollbar-color: rgb(20 20 20) rgb(41 48 56);
+      }
+
+      /* Works on Chrome, Edge, and Safari */
+      *::-webkit-scrollbar {
+        width: 12px;
+      }
+
+      *::-webkit-scrollbar-track {
+        background: rgb(20 20 20);
+      }
+
+      *::-webkit-scrollbar-thumb {
+        background-color: rgb(41 48 56);
+        border-radius: 20px;
+        border: 3px solid rgb(20 20 20);
       }
 
     </style>
