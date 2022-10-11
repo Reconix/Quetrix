@@ -40,9 +40,39 @@
     box-shadow: 0 1px 2px rgb(0 0 0 / 44%);
   }
 
+  /* Footer Buttons */
+
+  .footer-buttons > li > a {
+    color: #6c757d;
+    opacity: 0.7;
+  }
+  .footer-buttons > li > a:hover {
+    opacity: 1;
+    transition: all 0.5s;
+
+    position: relative;
+    bottom: 2px;
+  }
+
+  .footer-buttons > li > a.btn-github:hover {
+    color: #ADADAD !important;
+  }
+  .footer-buttons > li > a.btn-facebook:hover {
+    color: #3B5998 !important;
+  }
+  .footer-buttons > li > a.btn-twitter:hover {
+    color: #55ACEE !important;
+  }
+  .footer-buttons > li > a.btn-instagram:hover {
+    color: #125688 !important;
+  }
+
+
 </style>
 
 <footer class="">
+
+  <!-- add links, maybe a subscribe box ? -->
 
   <hr class="container footer-hr">
 
@@ -55,11 +85,11 @@
       <span class="mb-3 mb-md-0 text-muted"> © 2022 Company, Inc </span>
     </div>
 
-    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-      <li class="fs-5 ms-3"><a class="text-muted" href="https://github.com/Reconix/Quetrix"><i class="bi bi-github"></i></i></a></li>
-      <li class="fs-5 ms-3"><a class="text-muted" href="#"><i class="bi bi-facebook"></i></a></li>
-      <li class="fs-5 ms-3"><a class="text-muted" href="#"><i class="bi bi-twitter"></i></a></li>
-      <li class="fs-5 ms-3"><a class="text-muted" href="#"><i class="bi bi-instagram"></i></a></li>
+    <ul class="footer-buttons nav col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="fs-5 ms-3"><a class="btn-github" href="https://github.com/Reconix/Quetrix"><i class="bi bi-github"></i></i></a></li>
+      <li class="fs-5 ms-3"><a class="btn-facebook" href="#"><i class="bi bi-facebook"></i></a></li>
+      <li class="fs-5 ms-3"><a class="btn-twitter" href="#"><i class="bi bi-twitter"></i></a></li>
+      <li class="fs-5 ms-3"><a class="btn-instagram" href="#"><i class="bi bi-instagram"></i></a></li>
     </ul>
   </div>
 </footer>
