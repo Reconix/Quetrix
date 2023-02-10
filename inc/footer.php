@@ -22,7 +22,7 @@
   #btn-going-UP {
     position: fixed;
     bottom: 45px;
-    right: 25px;
+    right: 60px;
     opacity: 0;
 
     color: #bdbdbd;
@@ -48,7 +48,7 @@
   }
   .footer-buttons > li > a:hover {
     opacity: 1;
-    transition: all 0.5s;
+    transition: all 0.6s;
 
     position: relative;
     bottom: 2px;
