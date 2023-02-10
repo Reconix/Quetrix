@@ -110,7 +110,7 @@
 <!-- Probably won't have one, it'll be here if we do -->
 
 <!--=:: Main Menu ::=-->
-<?php include_once 'inc/header2.php'; ?>
+<?php include_once 'inc/header.php'; ?>
 
 <!--=:: Content Area ::=-->
 <main class="bg-gradient-que">
